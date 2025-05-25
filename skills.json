@@ -1,122 +1,194 @@
 [
-    {
-        "name": "ReactJS",
-        "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
-    },
-    {
-        "name": "ExpressJS",
-        "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
-    },
-    {
-        "name": "NodeJS",
-        "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
-    },
-    {
-        "name": "Redux",
-        "icon": "https://img.icons8.com/color/48/000000/redux.png"
-    },
-    {
-        "name": "Firebase",
-        "icon": "https://img.icons8.com/color/48/000000/firebase.png"
-    },
-    {
-        "name": "Android",
-        "icon": "https://img.icons8.com/fluency/48/000000/android-os.png"
-    },
-    {
-        "name": "MaterialUI",
-        "icon": "https://img.icons8.com/color/48/000000/material-ui.png"
-    },
-    {
-        "name": "ChakraUI",
-        "icon": "https://img.icons8.com/color/48/000000/chakra-ui.png"
-    },
-    {
-        "name": "TailwindCSS",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/48px-Tailwind_CSS_Logo.png"
-    },
-    {
-        "name": "Bootstrap",
-        "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-    },
-    {
-        "name": "Sass",
-        "icon": "https://img.icons8.com/color/48/000000/sass.png"
-    },
-    {
-        "name": "HTML5",
-        "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
-    },
-    {
-        "name": "CSS3",
-        "icon": "https://img.icons8.com/color/48/000000/css3.png"
-    },
-    {
-        "name": "JavaScript",
-        "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
-    },
-    {
-        "name": "Java",
-        "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
-    },
-    {
-        "name": "Kotlin",
-        "icon": "https://img.icons8.com/color/48/000000/kotlin.png"
-    },
-    {
-        "name": "PHP",
-        "icon": "https://img.icons8.com/offices/48/000000/php-logo.png"
-    },
-    {
-        "name": "Python",
-        "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
-    },
-    {
-        "name": "C++",
-        "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
-    },
-    {
-        "name": "MongoDB",
-        "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
-    },
-    {
-        "name": "MySQL",
-        "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
-    },
-    {
-        "name": "PostgreSQL",
-        "icon": "https://img.icons8.com/color/48/000000/postgreesql.png"
-    },
-    {
-        "name": "AWS",
-        "icon": "https://img.icons8.com/color/48/000000/amazon-web-services.png"
-    },
-    {
-        "name": "Heroku",
-        "icon": "https://img.icons8.com/color/48/000000/heroku.png"
-    },
-    {
-        "name": "Netlify",
-        "icon": "https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/000000/external-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites-logo-shadow-tal-revivo.png"
-    },
-    {
-        "name": "DigitalOcean",
-        "icon": "https://img.icons8.com/ios-filled/48/0080FF/digitalocean.png"
-    },
-    {
-        "name": "jQuery",
-        "icon": "https://img.icons8.com/ios-filled/48/1169ae/jquery.png"
-    },
-    {
-        "name": "Git VCS",
-        "icon": "https://img.icons8.com/color/48/000000/git.png"
-    },
-    {
-        "name": "GitHub",
-        "icon": "https://img.icons8.com/glyph-neue/48/ffffff/github.png"
-    },
-    {
-        "name": "WordPress",
-        "icon": "https://img.icons8.com/color/48/000000/wordpress.png"
-    }    
+  {
+    "name": "C",
+    "icon": "https://img.icons8.com/color/48/000000/c-programming.png"
+  },
+  {
+    "name": "C++",
+    "icon": "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png"
+  },
+  {
+    "name": "C#",
+    "icon": "https://img.icons8.com/color/48/000000/c-sharp-logo.png"
+  },
+  {
+    "name": "JavaScript",
+    "icon": "https://img.icons8.com/color/48/000000/javascript--v1.png"
+  },
+  {
+    "name": "TypeScript",
+    "icon": "https://img.icons8.com/color/48/000000/typescript.png"
+  },
+  {
+    "name": "Java",
+    "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v1.png"
+  },
+  {
+    "name": "Python",
+    "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
+  },
+  {
+    "name": "PHP",
+    "icon": "https://img.icons8.com/officel/48/000000/php-logo.png"
+  },
+  {
+    "name": "Bash",
+    "icon": "https://img.icons8.com/plasticine/48/000000/bash.png"
+  },
+  {
+    "name": "HTML5",
+    "icon": "https://img.icons8.com/color/48/000000/html-5--v1.png"
+  },
+  {
+    "name": "CSS3",
+    "icon": "https://img.icons8.com/color/48/000000/css3.png"
+  },
+  {
+    "name": "ReactJS",
+    "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-react-a-javascript-library-for-building-user-interfaces-logo-color-tal-revivo.png"
+  },
+  {
+    "name": "Next.js",
+    "icon": "https://img.icons8.com/fluency/48/000000/nextjs.png"
+  },
+  {
+    "name": "Redux",
+    "icon": "https://img.icons8.com/color/48/000000/redux.png"
+  },
+  {
+    "name": "Tailwind CSS",
+    "icon": "https://img.icons8.com/color/48/000000/tailwindcss.png"
+  },
+  {
+    "name": "Bootstrap",
+    "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
+  },
+  {
+    "name": "Chart.js",
+    "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-chartjs-a-popular-open-source-library-for-html5-based-charting-logo-color-tal-revivo.png"
+  },
+  {
+    "name": "Node.js",
+    "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
+  },
+  {
+    "name": "Express.js",
+    "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
+  },
+  {
+    "name": "Spring Boot",
+    "icon": "https://img.icons8.com/color/48/000000/spring-logo.png"
+  },
+  {
+    "name": "GraphQL",
+    "icon": "https://img.icons8.com/color/48/000000/graphql.png"
+  },
+  {
+    "name": ".NET",
+    "icon": "https://img.icons8.com/color/48/000000/net-framework.png"
+  },
+  {
+    "name": "Spring",
+    "icon": "https://img.icons8.com/color/48/000000/spring-logo.png"
+  },
+  {
+    "name": "MongoDB",
+    "icon": "https://img.icons8.com/color/48/000000/mongodb.png"
+  },
+  {
+    "name": "MySQL",
+    "icon": "https://img.icons8.com/color/48/000000/mysql-logo.png"
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "https://img.icons8.com/color/48/000000/postgresql.png"
+  },
+  {
+    "name": "Microsoft SQL Server",
+    "icon": "https://img.icons8.com/color/48/000000/microsoft-sql-server.png"
+  },
+  {
+    "name": "SQLite",
+    "icon": "https://img.icons8.com/color/48/000000/sqlite.png"
+  },
+  {
+    "name": "MariaDB",
+    "icon": "https://img.icons8.com/color/48/000000/mariadb.png"
+  },
+  {
+    "name": "Prisma",
+    "icon": "https://img.icons8.com/color/48/000000/prisma-orm.png"
+  },
+  {
+    "name": "Redis",
+    "icon": "https://img.icons8.com/color/48/000000/redis.png"
+  },
+  {
+    "name": "Supabase",
+    "icon": "https://img.icons8.com/color/48/000000/supabase.png"
+  },
+  {
+    "name": "Android",
+    "icon": "https://img.icons8.com/color/48/000000/android-os.png"
+  },
+  {
+    "name": "React Native",
+    "icon": "https://img.icons8.com/color/48/000000/react-native.png"
+  },
+  {
+    "name": "Docker",
+    "icon": "https://img.icons8.com/color/48/000000/docker.png"
+  },
+  {
+    "name": "Linux",
+    "icon": "https://img.icons8.com/color/48/000000/linux.png"
+  },
+  {
+    "name": "Webpack",
+    "icon": "https://img.icons8.com/color/48/000000/webpack.png"
+  },
+  {
+    "name": "Git",
+    "icon": "https://img.icons8.com/color/48/000000/git.png"
+  },
+  {
+    "name": "GitHub",
+    "icon": "https://img.icons8.com/ios-filled/50/000000/github.png"
+  },
+  {
+    "name": "GitHub Actions",
+    "icon": "https://img.icons8.com/color/48/000000/github.png"
+  },
+  {
+    "name": "ElectronJS",
+    "icon": "https://img.icons8.com/color/48/000000/electron.png"
+  },
+  {
+    "name": "Streamlit",
+    "icon": "https://img.icons8.com/color/48/000000/streamlit.png"
+  },
+  {
+    "name": "Firebase",
+    "icon": "https://img.icons8.com/color/48/000000/firebase.png"
+  },
+  {
+    "name": "Jest",
+    "icon": "https://img.icons8.com/color/48/000000/jest.png"
+  },
+  {
+    "name": "Postman",
+    "icon": "https://img.icons8.com/color/48/000000/postman-api.png"
+  },
+  {
+    "name": "NPM",
+    "icon": "https://img.icons8.com/color/48/000000/npm.png"
+  },
+  {
+    "name": "FFmpeg",
+    "icon": "https://img.icons8.com/color/48/000000/ffmpeg.png"
+  },
+  {
+    "name": "Browser Extension",
+    "icon": "https://img.icons8.com/color/48/000000/extension.png"
+  }
 ]
