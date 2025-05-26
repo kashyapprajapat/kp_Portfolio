@@ -2,7 +2,7 @@
   {
     "name": "ShortReelX",
     "desc": "ShortReelX is AI-powered tool that transforms long videos into YouTube Shorts, Instagram Reels, and other social media clips with maximum impact and virality.",
-    "image": "shortreelx",
+    "image": "shortreelxfrontend",
     "category": "web",
     "links": {
       "view": "https://shortreelx.vercel.app",
@@ -10,199 +10,29 @@
     }
   },
   {
-    "name": "DBMS_Project(HMS)",
-    "desc": "Collage Project of DBMS-Sem2",
-    "image": "shortreelx",
-    "category": "Database",
-    "links": {
-      "view": "https://dbms-project-sem2.onrender.com/",
-      "code": "https://github.com/kashyapprajapat/DBMS_Project/tree/main"
-    }
-  },
-  {
     "name": "ShortReelX",
     "desc": "Backend of ShortReelx.API of ShortReelx.",
-    "image": "shortreelx",
+    "image": "shortreelxbackend",
     "category": "Backend",
     "links": {
       "view": "https://shortreelx.onrender.com/",
       "code": "https://github.com/kashyapprajapat/ShortReelX"
     }
   },
-  {
-    "name": "Vaadin_Chat_App",
-    "desc": "A collage java project.",
-    "image": "shortreelx",
-    "category": "Backend",
-    "links": {
-      "view": "https://vaadin-chat-app-i7z3.onrender.com/",
-      "code": "https://github.com/kashyapprajapat/Vaadin_Chat_App"
-    }
-  },
-   {
-    "name": "SurakshaMitra",
+     {
+    "name": "SurakshaMitra - 4k download",
     "desc": "SurakshaMitra 🔐 is your security companion for managing passwords 🔑 and validating email 📨 addresses as well as file uploader 🗃️ and phone 📞 validator.",
-    "image": "shortreelx",
+    "image": "Surakshmitra",
     "category": "Python Package",
     "links": {
       "view": "https://pypi.org/project/SurakshaMitra/",
       "code": "https://github.com/kashyapprajapat/SurakshaMitra"
     }
   },
-   {
-    "name": "Notesfastapi",
-    "desc": "A simple note taking api.",
-    "image": "shortreelx",
-    "category": "FastApi",
-    "links": {
-      "view": "https://notesfastapi.onrender.com/",
-      "code": "https://github.com/kashyapprajapat/notesfastapi"
-    }
-  },
-  {
-    "name": "ReviewVerse_DesktopApp",
-    "desc": "ReviewVerse – A Desktop Application built using pyqts.",
-    "image": "shortreelx",
-    "category": "Python Desktopapp",
-    "links": {
-      "view": "https://github.com/kashyapprajapat/ReviewVerse_DesktopApp",
-      "code": "https://github.com/kashyapprajapat/ReviewVerse_DesktopApp"
-    }
-  },
-  {
-    "name": "Rakshawall",
-    "desc": "A lightweight host-based firewall built with JavaScript (Node.js) to monitor and control network traffic.",
-    "image": "shortreelx",
-    "category": "firewall",
-    "links": {
-      "view": "https://github.com/kashyapprajapat/rakshawall",
-      "code": "https://github.com/kashyapprajapat/rakshawall"
-    }
-  },
-  {
-    "name": "ATSBooster",
-    "desc": "ATSBooster enhances resumes by analyzing job descriptions and providing AI-driven suggestions to improve ATS compatibility and increase hiring chances. 🚀",
-    "image": "shortreelx",
-    "category": "Nocode tool",
-    "links": {
-      "view": "https://www.gumloop.com/interface/Atsbooster-jVSbrWUfcR8F9eTWtZmaRL",
-      "code": "https://github.com/kashyapprajapat/ATSBooster"
-    }
-  },
-  {
-    "name": "TsGuardian",
-    "desc": "TSGuardian – Your AI-Powered TypeScript Code Analyst 🚀.",
-    "image": "shortreelx",
-    "category": "Frontend",
-    "links": {
-      "view": "https://tsguardian.vercel.app/",
-      "code": "https://github.com/kashyapprajapat/tsguardian"
-    }
-  },
-   {
-    "name": "TsGuardianBackend",
-    "desc": "TSGuardian – Your AI-Powered TypeScript Code Analyst 🚀.",
-    "image": "shortreelx",
-    "category": "Backend",
-    "links": {
-      "view": "https://tsguardianbackend.onrender.com/",
-      "code": "https://github.com/kashyapprajapat/tsguardianbackend"
-    }
-  },
-  {
-    "name": "ytGivawayWinnerfrontend",
-    "desc": "Free YouTube Comment Picker to randomly select winners from video comments. Ensure fair and unbiased giveaways!",
-    "image": "shortreelx",
-    "category": "Frontend",
-    "links": {
-      "view": "https://yt-givaway-winnerfrontend.vercel.app/",
-      "code": "https://github.com/kashyapprajapat/ytGivawayWinnerfrontend-"
-    }
-  },
-  {
-    "name": "YouTubeGiveawayPicker",
-    "desc": "YouTube Giveaway Winner Picker API 🎉.",
-    "image": "shortreelx",
-    "category": "Backend",
-    "links": {
-      "view": "https://youtubegiveawaypicker.onrender.com/",
-      "code": "https://github.com/kashyapprajapat/YouTubeGiveawayPicker"
-    }
-  },
-  {
-    "name": "ECS-Enquiry-Capturing-System",
-    "desc": "This enquiry capturing system enables seamless submission of customer enquiries.",
-    "image": "shortreelx",
-    "category": "Backend",
-    "links": {
-      "view": "https://ecs-enquiry-capturing-system.onrender.com/enquiry",
-      "code": "https://github.com/kashyapprajapat/ECS-Enquiry-Capturing-System"
-    }
-  },
-  {
-    "name": "ReviewVerse",
-    "desc": "ReviewVerse 📚 – A universe of book reviews and reader experiences.",
-    "image": "shortreelx",
-    "category": "Backend",
-    "links": {
-      "view": "https://reviewverse.onrender.com/",
-      "code": "https://github.com/kashyapprajapat/ReviewVerse"
-    }
-  },
-  {
-    "name": "Expense Tracker",
-    "desc": "Expense Tracker Web Application built using Django.",
-    "image": "shortreelx",
-    "category": "FullStack",
-    "links": {
-      "view": "https://expensetracker-eno8.onrender.com/expenses/",
-      "code": "https://github.com/kashyapprajapat/django-learning"
-    }
-  },
-  {
-    "name": "ECS-Enquiry-Capturing-System_Frontend",
-    "desc": "This system allows users to submit enquiries regarding services, feedback, or complaints.",
-    "image": "shortreelx",
-    "category": "Frontend",
-    "links": {
-      "view": "https://ecs-enquirycapuringsystem.netlify.app/",
-      "code": "https://github.com/kashyapprajapat/ECS-Enquiry-Capturing-System_Frontend"
-    }
-  },
-  {
-    "name": "HabitTracker",
-    "desc": "A simple Habit Tracker webapp build using Zustand.",
-    "image": "shortreelx",
-    "category": "FullStack",
-    "links": {
-      "view": "https://habittracker-e29a.onrender.com/",
-      "code": "https://github.com/kashyapprajapat/HabitTracker"
-    }
-  },
-  {
-    "name": "Skynet_OTA_Backend",
-    "desc": "A Bca final year project.Internship at Skynet. doing Ota backend Resource.",
-    "image": "shortreelx",
-    "category": "Backend",
-    "links": {
-      "view": "https://github.com/kashyapprajapat/Skynet_OTA_Backend",
-      "code": "https://github.com/kashyapprajapat/Skynet_OTA_Backend"
-    }
-  },
- {
-    "name": "TenstackQuery",
-    "desc": "This is learning project with TenstackQuery🌴.",
-    "image": "shortreelx",
-    "category": "Backend",
-    "links": {
-      "view": "https://tenstackquery.netlify.app/",
-      "code": "https://github.com/kashyapprajapat/TenstackQuery"
-    }
-  },
   {
     "name": "cuttingchai",
     "desc": "CuttingChai: A Simple, Desi-Flavored Custom Programming Language.",
-    "image": "shortreelx",
+    "image": "cuttingchai",
     "category": "Custome Progrraming Language",
     "links": {
       "view": "https://www.npmjs.com/package/cuttingchai",
@@ -212,7 +42,7 @@
    {
     "name": "cuttingchai-",
     "desc": "A Vs Code Extension For my Own Programming Language known as CuttingChai.",
-    "image": "shortreelx",
+    "image": "chaivsextension",
     "category": "Progrraming Language Extension",
     "links": {
       "view": "https://marketplace.visualstudio.com/items?itemName=cuttingchai.cuttingchai",
@@ -222,17 +52,197 @@
   {
     "name": "NPMProject",
     "desc": "Otp & Captcha Generator Npm Package.It increase developer productivivty by 20%.",
-    "image": "shortreelx",
+    "image": "npm",
     "category": "Npm Package",
     "links": {
       "view": "https://www.npmjs.com/package/otpcaptchagenerator",
       "code": "https://github.com/kashyapprajapat/NPMProject"
     }
   },
+    {
+    "name": "DrinkDost",
+    "desc": "DrinkDost is a browser extension designed to help you stay hydrated throughout your workday.",
+    "image": "Drinkdost",
+    "category": "Browser Extension",
+    "links": {
+      "view": "https://github.com/kashyapprajapat/DrinkDost",
+      "code": "https://github.com/kashyapprajapat/DrinkDost"
+    }
+  },
+    {
+    "name": "Skynet_OTA_Backend",
+    "desc": "A Bca final year project.Internship at Skynet. doing Ota backend Resource.",
+    "image": "api",
+    "category": "Backend",
+    "links": {
+      "view": "https://github.com/kashyapprajapat/Skynet_OTA_Backend",
+      "code": "https://github.com/kashyapprajapat/Skynet_OTA_Backend"
+    }
+  },
+  {
+    "name": "ReviewVerse",
+    "desc": "ReviewVerse 📚 – A universe of book reviews and reader experiences.",
+    "image": "reviewvesrebackend",
+    "category": "Backend",
+    "links": {
+      "view": "https://reviewverse.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/ReviewVerse"
+    }
+  },
+    {
+    "name": "TsGuardian",
+    "desc": "TSGuardian – Your AI-Powered TypeScript Code Analyst 🚀.",
+    "image": "tsguardian",
+    "category": "Frontend",
+    "links": {
+      "view": "https://tsguardian.vercel.app/",
+      "code": "https://github.com/kashyapprajapat/tsguardian"
+    }
+  },
+  {
+    "name": "DBMS_Project(HMS)",
+    "desc": "Collage Project of DBMS-Sem2",
+    "image": "dbms",
+    "category": "Database",
+    "links": {
+      "view": "https://dbms-project-sem2.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/DBMS_Project/tree/main"
+    }
+  },
+  {
+    "name": "Vaadin_Chat_App",
+    "desc": "A collage java project.",
+    "image": "vadinchatapp",
+    "category": "Backend",
+    "links": {
+      "view": "https://vaadin-chat-app-i7z3.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/Vaadin_Chat_App"
+    }
+  },
+   {
+    "name": "Notesfastapi",
+    "desc": "A simple note taking api.",
+    "image": "noteapi",
+    "category": "FastApi",
+    "links": {
+      "view": "https://notesfastapi.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/notesfastapi"
+    }
+  },
+  {
+    "name": "ReviewVerse_DesktopApp",
+    "desc": "ReviewVerse – A Desktop Application built using pyqts.",
+    "image": "reviewverse",
+    "category": "Python Desktopapp",
+    "links": {
+      "view": "https://github.com/kashyapprajapat/ReviewVerse_DesktopApp",
+      "code": "https://github.com/kashyapprajapat/ReviewVerse_DesktopApp"
+    }
+  },
+  {
+    "name": "Rakshawall",
+    "desc": "A lightweight host-based firewall built with JavaScript (Node.js) to monitor and control network traffic.",
+    "image": "rakshwall",
+    "category": "firewall",
+    "links": {
+      "view": "https://github.com/kashyapprajapat/rakshawall",
+      "code": "https://github.com/kashyapprajapat/rakshawall"
+    }
+  },
+  {
+    "name": "ATSBooster",
+    "desc": "ATSBooster enhances resumes by analyzing job descriptions and providing AI-driven suggestions to improve ATS compatibility and increase hiring chances. 🚀",
+    "image": "Ats",
+    "category": "Nocode tool",
+    "links": {
+      "view": "https://www.gumloop.com/interface/Atsbooster-jVSbrWUfcR8F9eTWtZmaRL",
+      "code": "https://github.com/kashyapprajapat/ATSBooster"
+    }
+  },
+   {
+    "name": "TsGuardianBackend",
+    "desc": "TSGuardian – Your AI-Powered TypeScript Code Analyst 🚀.",
+    "image": "tsbackend",
+    "category": "Backend",
+    "links": {
+      "view": "https://tsguardianbackend.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/tsguardianbackend"
+    }
+  },
+  {
+    "name": "ytGivawayWinnerfrontend",
+    "desc": "Free YouTube Comment Picker to randomly select winners from video comments.",
+    "image": "ytfrontend",
+    "category": "Frontend",
+    "links": {
+      "view": "https://yt-givaway-winnerfrontend.vercel.app/",
+      "code": "https://github.com/kashyapprajapat/ytGivawayWinnerfrontend-"
+    }
+  },
+  {
+    "name": "YouTubeGiveawayPicker",
+    "desc": "YouTube Giveaway Winner Picker API 🎉.",
+    "image": "ytbackend",
+    "category": "Backend",
+    "links": {
+      "view": "https://youtubegiveawaypicker.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/YouTubeGiveawayPicker"
+    }
+  },
+  {
+    "name": "ECS-Enquiry-Capturing-System",
+    "desc": "This enquiry capturing system enables seamless submission of customer enquiries.",
+    "image": "ECSSystem",
+    "category": "Backend",
+    "links": {
+      "view": "https://ecs-enquiry-capturing-system.onrender.com/enquiry",
+      "code": "https://github.com/kashyapprajapat/ECS-Enquiry-Capturing-System"
+    }
+  },
+  {
+    "name": "Expense Tracker",
+    "desc": "Expense Tracker Web Application built using Django.",
+    "image": "expenses",
+    "category": "FullStack",
+    "links": {
+      "view": "https://expensetracker-eno8.onrender.com/expenses/",
+      "code": "https://github.com/kashyapprajapat/django-learning"
+    }
+  },
+  {
+    "name": "ECS-Enquiry-Capturing-System_Frontend",
+    "desc": "This system allows users to submit enquiries regarding services, feedback, or complaints.",
+    "image": "ECs",
+    "category": "Frontend",
+    "links": {
+      "view": "https://ecs-enquirycapuringsystem.netlify.app/",
+      "code": "https://github.com/kashyapprajapat/ECS-Enquiry-Capturing-System_Frontend"
+    }
+  },
+  {
+    "name": "HabitTracker",
+    "desc": "A simple Habit Tracker webapp build using Zustand.",
+    "image": "Habit",
+    "category": "FullStack",
+    "links": {
+      "view": "https://habittracker-e29a.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/HabitTracker"
+    }
+  },
+ {
+    "name": "TenstackQuery",
+    "desc": "This is learning project with TenstackQuery🌴.",
+    "image": "Tenstack",
+    "category": "Backend",
+    "links": {
+      "view": "https://tenstackquery.netlify.app/",
+      "code": "https://github.com/kashyapprajapat/TenstackQuery"
+    }
+  },
   {
     "name": "Redispai",
     "desc": "Api, learning project of redis.",
-    "image": "shortreelx",
+    "image": "api",
     "category": "Backend",
     "links": {
       "view": "https://redispai.onrender.com/",
@@ -242,27 +252,17 @@
     {
     "name": "PrismaRestAPI",
     "desc": "Rest api is build using Prisma.",
-    "image": "shortreelx",
+    "image": "Apiprisma",
     "category": "Backend",
     "links": {
       "view": "https://prismarestapi.onrender.com/",
       "code": "https://github.com/kashyapprajapat/PrismaRestAPI"
     }
   },
-  {
-    "name": "DrinkDost",
-    "desc": "DrinkDost is a browser extension designed to help you stay hydrated throughout your workday.",
-    "image": "shortreelx",
-    "category": "Browser Extension",
-    "links": {
-      "view": "https://github.com/kashyapprajapat/DrinkDost",
-      "code": "https://github.com/kashyapprajapat/DrinkDost"
-    }
-  },
     {
     "name": "ThreadApp-Graphql",
     "desc": "A backend of Thread app using Graphql. Learning Graphql.",
-    "image": "shortreelx",
+    "image": "api",
     "category": "Backend",
     "links": {
       "view": "https://github.com/kashyapprajapat/ThreadApp-Graphql",
@@ -272,7 +272,7 @@
   {
     "name": "GyannSlate",
     "desc": "GyannSlate is a modern Progressive Web App (PWA).",
-    "image": "shortreelx",
+    "image": "gyanslate",
     "category": "Backend",
     "links": {
       "view": "https://gyann-slate.vercel.app/",
@@ -282,7 +282,7 @@
   {
     "name": "openchatfrontend",
     "desc": "A chat application frontend which is built using socket.io + core React.",
-    "image": "shortreelx",
+    "image": "openchat",
     "category": "Frontend",
     "links": {
       "view": "https://openchatfrontend.onrender.com/",
@@ -292,7 +292,7 @@
     {
     "name": "openchatbackend",
     "desc": "A chat application backend built using socket.io.",
-    "image": "shortreelx",
+    "image": "api",
     "category": "Backend",
     "links": {
       "view": "https://openchatbackend.vercel.app/",
@@ -302,7 +302,7 @@
   {
     "name": "Nextjsauth",
     "desc": "A full fledge Authentication project built using Nextjs.",
-    "image": "shortreelx",
+    "image": "nextauth",
     "category": "FullStack",
     "links": {
       "view": "https://nextjsauth-one.vercel.app/login",
@@ -312,7 +312,7 @@
   {
     "name": "RoolTheDice",
     "desc": "A Roll the dice is React native app. where user roll the dice.",
-    "image": "shortreelx",
+    "image": "Appicon",
     "category": "Mobile",
     "links": {
       "view": "https://github.com/kashyapprajapat/RoolTheDice",
@@ -322,7 +322,7 @@
     {
     "name": "Tic-Tac-Toe",
     "desc": "A Tic-Tac-Toe is game where 2 user can play this game with each other using one device.",
-    "image": "shortreelx",
+    "image": "Appicon",
     "category": "Mobile",
     "links": {
       "view": "https://github.com/kashyapprajapat/tic-tac-toe",
@@ -332,7 +332,7 @@
   {
     "name": "PasswordGenerator",
     "desc": "A secure 🔐 and safe password Generator app. using this user can generate any length of password by selecting available options.",
-    "image": "shortreelx",
+    "image": "Appicon",
     "category": "Mobile",
     "links": {
       "view": "https://github.com/kashyapprajapat/PasswordGenerator",
@@ -342,7 +342,7 @@
   {
     "name": "CurrancyConverter",
     "desc": "A Currancy converter app built using ReactNative.",
-    "image": "shortreelx",
+    "image": "Appicon",
     "category": "Mobile",
     "links": {
       "view": "https://github.com/kashyapprajapat/CurrancyConverter",
@@ -352,7 +352,7 @@
     {
     "name": "BookReadingFrontend",
     "desc": "A Book Reading project.",
-    "image": "shortreelx",
+    "image": "book",
     "category": "Frontend",
     "links": {
       "view": "https://book-reading-frontend-roan.vercel.app/",
@@ -362,7 +362,7 @@
   {
     "name": "BookReadingBackend",
     "desc": "A Book Reading Api project.",
-    "image": "shortreelx",
+    "image": "api",
     "category": "Backend",
     "links": {
       "view": "https://github.com/kashyapprajapat/BookReadingBackend",
@@ -372,7 +372,7 @@
   {
     "name": "KaryaKoash",
     "desc": "KaryaKoash is a modern and intuitive todo application.",
-    "image": "shortreelx",
+    "image": "karyakosh",
     "category": "FullStack",
     "links": {
       "view": "https://karya-koash.vercel.app/",
@@ -382,7 +382,7 @@
     {
     "name": "DesktopApp-CollageAdmission",
     "desc": "Desktop Application For Collage Admission Created Using Electron js.",
-    "image": "shortreelx",
+    "image": "Electrondesktop",
     "category": "Jsavscript Desktop app",
     "links": {
       "view": "https://github.com/kashyapprajapat/DesktopApp-CollageAdmission",
@@ -392,7 +392,7 @@
   {
     "name": "cetificates",
     "desc": "All certificates of My Achivements..",
-    "image": "shortreelx",
+    "image": "certificates",
     "category": "Jsavscript Desktop app",
     "links": {
       "view": "https://www.linkedin.com/in/kashyap-prajapati14/",
@@ -402,7 +402,7 @@
     {
     "name": "HospitalWebApplication",
     "desc": "Welcome to Doctor Hospital, a leading healthcare institution dedicated to providing exceptional medical services and compassionate care.",
-    "image": "shortreelx",
+    "image": "hospital",
     "category": "Frontend",
     "links": {
       "view": "https://besthospital.netlify.app/",
@@ -412,7 +412,7 @@
       {
     "name": "Hospital-API",
     "desc": "Hospital Web Application API.",
-    "image": "shortreelx",
+    "image": "api",
     "category": "Backend",
     "links": {
       "view": "https://hospital-webapi.onrender.com",
@@ -422,7 +422,7 @@
   {
     "name": "MeetingApplication",
     "desc": "A powerful meeting application that enables seamless collaboration and communication.",
-    "image": "shortreelx",
+    "image": "MeetingApplication",
     "category": "Frontend",
     "links": {
       "view": "https://github.com/kashyapprajapat/MeetingApplication",
@@ -432,7 +432,7 @@
   {
     "name": "MeetingAPI",
     "desc": "A powerful Api of meeting application.",
-    "image": "shortreelx",
+    "image": "api",
     "category": "Backend",
     "links": {
       "view": "https://github.com/kashyapprajapat/MeetingAPI",
@@ -442,7 +442,7 @@
     {
     "name": "MYSQL-MERN-API",
     "desc": "Api build using mysql database.",
-    "image": "shortreelx",
+    "image": "api",
     "category": "Backend",
     "links": {
       "view": "https://mysql-mern-api.vercel.app/",
