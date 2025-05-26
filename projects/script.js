@@ -20,7 +20,7 @@ $(document).ready(function () {
 document.addEventListener('visibilitychange',
     function () {
         if (document.visibilityState === "visible") {
-            document.title = "Projects | Portfolio Kashyap Prajapati";
+            document.title = "Projects | Kashyap Prajapati";
             $("#favicon").attr("href", "/assets/images/favicon.png");
         }
         else {
