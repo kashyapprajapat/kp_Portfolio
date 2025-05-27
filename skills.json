@@ -52,8 +52,16 @@
     "icon": "https://img.icons8.com/fluency/48/000000/nextjs.png"
   },
   {
+    "name": "Zustand",
+    "icon": "https://img.icons8.com/color/48/000000/bear.png"
+  },
+  {
     "name": "Redux",
     "icon": "https://img.icons8.com/color/48/000000/redux.png"
+  },
+  {
+    "name": "TanStack Query",
+    "icon": "https://img.icons8.com/color/48/000000/react-native.png"
   },
   {
     "name": "Tailwind CSS",
@@ -68,6 +76,14 @@
     "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-chartjs-a-popular-open-source-library-for-html5-based-charting-logo-color-tal-revivo.png"
   },
   {
+    "name": "shadcn/ui",
+    "icon": "https://img.icons8.com/color/48/000000/design.png"
+  },
+  {
+    "name": "Figma",
+    "icon": "https://img.icons8.com/color/48/000000/figma--v1.png"
+  },
+  {
     "name": "Node.js",
     "icon": "https://img.icons8.com/color/48/000000/nodejs.png"
   },
@@ -76,12 +92,28 @@
     "icon": "https://img.icons8.com/fluency/48/000000/node-js.png"
   },
   {
+    "name": "Fastify",
+    "icon": "https://img.icons8.com/color/48/000000/speed.png"
+  },
+  {
+    "name": "FastAPI",
+    "icon": "https://img.icons8.com/color/48/000000/api-settings.png"
+  },
+  {
     "name": "Spring Boot",
     "icon": "https://img.icons8.com/color/48/000000/spring-logo.png"
   },
   {
     "name": "GraphQL",
     "icon": "https://img.icons8.com/color/48/000000/graphql.png"
+  },
+  {
+    "name": "Socket.IO",
+    "icon": "https://img.icons8.com/color/48/000000/web-socket.png"
+  },
+  {
+    "name": "PM2",
+    "icon": "https://img.icons8.com/color/48/000000/process.png"
   },
   {
     "name": ".NET",
@@ -128,6 +160,10 @@
     "icon": "https://img.icons8.com/color/48/000000/supabase.png"
   },
   {
+    "name": "PWA",
+    "icon": "https://img.icons8.com/color/48/000000/progressive-web-app.png"
+  },
+  {
     "name": "Android",
     "icon": "https://img.icons8.com/color/48/000000/android-os.png"
   },
@@ -166,6 +202,18 @@
   {
     "name": "Streamlit",
     "icon": "https://img.icons8.com/color/48/000000/streamlit.png"
+  },
+  {
+    "name": "AWT",
+    "icon": "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"
+  },
+  {
+    "name": "PyQt",
+    "icon": "https://img.icons8.com/color/48/000000/qt.png"
+  },
+  {
+    "name": "Appwrite",
+    "icon": "https://img.icons8.com/color/48/000000/database.png"
   },
   {
     "name": "Firebase",
