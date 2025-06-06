@@ -229,6 +229,26 @@
       "code": "https://github.com/kashyapprajapat/HabitTracker"
     }
   },
+  {
+   "name": "DBMatch",
+    "desc": "Matches your project to the best database choice.",
+    "image": "DBMatchFrontend",
+    "category": "Frontend",
+    "links": {
+      "view": "https://dbmatch.vercel.app/",
+      "code": "https://github.com/kashyapprajapat/DBMatch_Frontend"
+    }
+  },
+  {
+     "name": "DBMatch-API",
+    "desc": "Matches your project to the best database choice.",
+    "image": "DBMatchAPi",
+    "category": "Backend",
+    "links": {
+      "view": "https://dbmatch-backend.onrender.com/",
+      "code": "https://github.com/kashyapprajapat/DBMatch_Backend"
+    }
+  },
  {
     "name": "TenstackQuery",
     "desc": "This is learning project with TenstackQuery🌴.",
