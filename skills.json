@@ -28,6 +28,10 @@
     "icon": "https://img.icons8.com/color/48/000000/python--v1.png"
   },
   {
+  "name": "Go",
+  "icon": "https://img.icons8.com/color/48/000000/golang.png"
+  },
+  {
     "name": "PHP",
     "icon": "https://img.icons8.com/officel/48/000000/php-logo.png"
   },
@@ -70,10 +74,6 @@
   {
     "name": "Bootstrap",
     "icon": "https://img.icons8.com/color/48/000000/bootstrap.png"
-  },
-  {
-    "name": "Chart.js",
-    "icon": "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/000000/external-chartjs-a-popular-open-source-library-for-html5-based-charting-logo-color-tal-revivo.png"
   },
   {
     "name": "shadcn/ui",
