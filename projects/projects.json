@@ -140,6 +140,16 @@
     }
   },
   {
+   "name": "CollectHub 🎒📃",
+   "desc": "Your personal collections. All in one place. Built with Go (API - GoFiber).",
+   "image": "collecthub",
+   "category": "Backend",
+   "links": {
+    "view": "https://collecthub-c1la.onrender.com",
+    "code": "https://github.com/kashyapprajapat/CollectHub"
+    }
+  },
+  {
     "name": "Rakshawall",
     "desc": "A lightweight host-based firewall built with JavaScript (Node.js) to monitor and control network traffic.",
     "image": "rakshwall",
@@ -335,7 +345,7 @@
     "image": "Appicon",
     "category": "Mobile",
     "links": {
-      "view": "https://github.com/kashyapprajapat/RoolTheDice",
+      "view": "https://www.amazon.com/Prajapati-Kashyap-Sanjaybhai-Roll-Dice/dp/B0FFBMLGQW/ref=sr_1_12?dib=eyJ2IjoiMSJ9.LRYCkJNPpMn49cPEBLoSIMuKEccDhLNUTFaPcTAFcn5I71Pw_kFLqCqYd8cCvkGh27YFvxuazXR5P-yFklnrTXqzHHTR5oq_QbZEDxmIXQf2XES9gmjnEZlk6riHfuXNdpERN1gdq4vSyuxseejlEPTPRlIimLRSN1cKz3A4lqDTbYYIcW8WWF5zIW7OShzmPrLwmGCFhXYPViiLBTRdEHzIV76Ffgi7ayIZLOJuyKq6FkZlCSDrCPhjDxv-f6cHqn5odbQkHoqOLMvIN0rZ6dr0Hwbu7nkErkmEt5nyhGs.MAxR9D1knrWzTTWojqkoFgnlBwZrebSK1cyzEPA5Quw&dib_tag=se&keywords=Roll+The+Dice&qid=1750852837&s=mobile-apps&sr=1-12",
       "code": "https://github.com/kashyapprajapat/RoolTheDice"
     }
   },
@@ -345,7 +355,7 @@
     "image": "Appicon",
     "category": "Mobile",
     "links": {
-      "view": "https://github.com/kashyapprajapat/tic-tac-toe",
+      "view": "https://kashyap-kp.itch.io/tic-tac-toe?secret=lFLTezHOxskHhRXvdkqXBKdwRs",
       "code": "https://github.com/kashyapprajapat/tic-tac-toe"
     }
   },
