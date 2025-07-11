@@ -35,12 +35,29 @@
             <li><a href="/#education">Education</a></li>
             <li><a class="active" href="/#work">Work</a></li>
             <li><a href="/#experience">Experience</a></li>
-            <li><a href="https://hashnode.com/@kp007" target="_blank">Blog</a></li>
+            <li><a href="#" onclick="showModal()">Blog</a></li>
             <li><a href="/#contact">Contact</a></li>
             </ul>
         </nav>
 </header>
 <!-- navbar ends -->
+ <!-- Blog Modal -->
+<div id="blogModal" class="modal">
+  <div class="modal-content">
+    <span class="close-icon" onclick="closeModal()">❌</span>
+    <p class="modal-title">Where do you read best? 📚👇</p>
+    <div class="button-group">
+  <button class="btn hashnode" onclick="openLink('https://hashnode.com/@kp007')">
+    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png" alt="Hashnode Logo" />
+    <span>Hashnode</span>
+  </button>
+  <button class="btn medium" onclick="openLink('https://medium.com/@prajapatikashyap14')">
+    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="Medium Logo" />
+    <span>Medium</span>
+  </button>
+</div>
+  </div>
+</div>
 
 <!-- work project section starts -->
 <section class="work" id="work">
@@ -106,6 +123,20 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./script.js"></script>
+  <script>
+  function showModal() {
+    document.getElementById("blogModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("blogModal").style.display = "none";
+  }
+
+  function openLink(url) {
+    window.open(url, '_blank');
+    closeModal();
+  }
+</script>
 
 </body>
 </html>

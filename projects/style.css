@@ -99,6 +99,103 @@ header .navbar ul li a:hover{
   border-bottom: .2rem solid #011aff;
   padding: .5rem 0;
 }
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Box */
+.modal-content {
+  background-color: white;
+  padding: 30px 20px 25px;
+  border-radius: 12px;
+  width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: sans-serif;
+}
+
+/* Title */
+.modal-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Close ❌ Icon */
+.close-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #e74c3c;
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+/* Shared button styles */
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  width: 140px;
+}
+
+
+.btn img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* Makes dark logos visible on dark buttons */
+}
+
+
+/* Platform-specific button colors */
+.btn.hashnode {
+  background-color: #2962ff;
+  color: white;
+}
+
+.btn.hashnode :hover{
+  background-color: #2962ff;
+  color: white;
+  cursor: pointer;
+}
+
+.btn.medium {
+  background-color: #000000;
+  color: white;
+}
+
+.btn.medium:hover {
+  background-color: #000000;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
 /* navbar ends */
 
 /* hamburger icon starts*/
