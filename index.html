@@ -83,7 +83,7 @@
         <li><a href="#education">Education</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#" onclick="showModal()">Blog</a></li>
+        <li><a href="#" onclick="showBlogFeatureModal()">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -91,25 +91,22 @@
   <!-- navbar ends -->
 
 <!-- Blog Modal -->
-<div id="blogModal" class="modal">
-  <div class="modal-content">
-    <span class="close-icon" onclick="closeModal()">❌</span>
-    <p class="modal-title">Where do you read best? 📚👇</p>
-    <div class="button-group">
-  <button class="btn hashnode" onclick="openLink('https://hashnode.com/@kp007')">
-    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png" alt="Hashnode Logo" />
-    <span>Hashnode</span>
-  </button>
-  <button class="btn medium" onclick="openLink('https://medium.com/@prajapatikashyap14')">
-    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="Medium Logo" />
-    <span>Medium</span>
-  </button>
-</div>
+<div id="blogFeatureModal" class="blog-feature-modal">
+  <div class="blog-feature-modal-content">
+    <span class="blog-feature-close-icon" onclick="closeBlogFeatureModal()">❌</span>
+    <p class="blog-feature-modal-title">Where do you read best? 📚👇</p>
+    <div class="blog-feature-button-group">
+      <button class="blog-feature-btn blog-feature-hashnode" onclick="openBlogLink('https://hashnode.com/@kp007')">
+        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611902473383/CDyAuTy75.png" alt="Hashnode Logo" />
+        <span>Hashnode</span>
+      </button>
+      <button class="blog-feature-btn blog-feature-medium" onclick="openBlogLink('https://medium.com/@prajapatikashyap14')">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png" alt="Medium Logo" />
+        <span>Medium</span>
+      </button>
+    </div>
   </div>
 </div>
-
-
-
 
   <!-- hero section starts -->
   <section class="home" id="home">
@@ -138,7 +135,6 @@
             </a>
           </li>
 
-
           </li>
 
         </ul>
@@ -166,10 +162,10 @@
 
          <p>I am a <span style="color: #FF7A00;">Full-Stack developer</span> based in Gujrat, India.
     Pursuing MCA from The Maharaja Sayajirao University of Baroda.
-    <b>“I get a real kick out of building things that work smoothly behind the scenes — the kind of stuff most people
-  don’t see, but everything depends on.”</b>
+    <b>"I get a real kick out of building things that work smoothly behind the scenes — the kind of stuff most people
+  don't see, but everything depends on."</b>
     Whether it's optimizing <span style="color: #FF7A00;">backend infrastructure</span>, streamlining <span style="color: #FF7A00;">DevOps </span>pipelines, or crafting seamless <span style="color: #FF7A00;">mobile app</span>
-    experiences, I’m all in.
+    experiences, I'm all in.
     Working for myself to improve my skills.
     <span style="color: #FF7A00;">Exploring the Depths of Backend & DevOps.</span>
   </p>
@@ -387,9 +383,9 @@
 
       <div class="box">
         <h3>Kashyap Prajapati</h3>
-        <p>Thanks for exploring my portfolio! I’m passionate about crafting modern, scalable web applications.
+        <p>Thanks for exploring my portfolio! I'm passionate about crafting modern, scalable web applications.
           <br /><br />
-          Let’s connect on social platforms to collaborate, innovate, and grow together. <br /><br />
+          Let's connect on social platforms to collaborate, innovate, and grow together. <br /><br />
           🚀 Keep Building. Keep Evolving.
         </p>
       </div>
@@ -466,20 +462,35 @@
 
   <script src="./assets/js/script.js"></script>
   <script>
-  function showModal() {
-    document.getElementById("blogModal").style.display = "block";
-  }
+    // Blog Feature Modal Functions
+    function showBlogFeatureModal() {
+      document.getElementById("blogFeatureModal").style.display = "block";
+    }
 
-  function closeModal() {
-    document.getElementById("blogModal").style.display = "none";
-  }
+    function closeBlogFeatureModal() {
+      document.getElementById("blogFeatureModal").style.display = "none";
+    }
 
-  function openLink(url) {
-    window.open(url, '_blank');
-    closeModal();
-  }
-</script>
+    function openBlogLink(url) {
+      window.open(url, '_blank');
+      closeBlogFeatureModal();
+    }
 
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById("blogFeatureModal");
+      if (event.target === modal) {
+        closeBlogFeatureModal();
+      }
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeBlogFeatureModal();
+      }
+    });
+  </script>
 
 </body>
 

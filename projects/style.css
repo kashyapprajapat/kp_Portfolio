@@ -1,46 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  outline: none; border: none;
-  text-transform:capitalize;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
   transition: all .2s linear;
 }
-html{
+
+html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-body{
+
+body {
   background: #f7f7f7;
   font-family: 'Poppins', sans-serif;
 }
 
-*::selection{
+*::selection {
   background: #2b3dda;
   color: #fff;
 }
 
-html{
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-html::-webkit-scrollbar{
+/* Custom Scrollbar */
+html::-webkit-scrollbar {
   width: .8rem;
 }
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track {
   background: rgb(235, 202, 245);
 }
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background: #420177;
 }
 
-/* navbar starts */
-header{
+/* ---------------- NAVBAR ---------------- */
+header {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
@@ -52,20 +52,23 @@ header{
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(146,161,176,.3);
 }
-section{
+
+section {
   min-height: 100vh;
   padding: 2rem 9%;
 }
-.heading{
+
+.heading {
   font-size: 3.5rem;
   color: rgb(32, 32, 32);
   font-weight: 800;
   text-align: center;
 }
-.heading span{
+.heading span {
   color: rgb(115, 3, 167);
 }
-header .logo{
+
+header .logo {
   font-size: 1.9rem;
   font-weight: 800;
   text-decoration: none;
@@ -77,16 +80,17 @@ header .logo i {
 header .logo:hover {
   color: #fc8c05;
 }
-header .navbar ul{
+
+header .navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .navbar li{
+header .navbar li {
   margin-left: 2.5rem;
 }
-header .navbar ul li a{
+header .navbar ul li a {
   font-size: 1.57rem;
   color: #0E2431;
   font-weight: 600;
@@ -94,13 +98,14 @@ header .navbar ul li a{
   letter-spacing: 0.04rem;
 }
 header .navbar ul li a.active,
-header .navbar ul li a:hover{
+header .navbar ul li a:hover {
   color: #011aff;
   border-bottom: .2rem solid #011aff;
   padding: .5rem 0;
 }
-/* Modal Overlay */
-.modal {
+
+/* ---------------- BLOG MODAL ---------------- */
+.blog-feature-modal {
   display: none;
   position: fixed;
   z-index: 999;
@@ -109,30 +114,26 @@ header .navbar ul li a:hover{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Modal Box */
-.modal-content {
-  background-color: white;
+.blog-feature-modal-content {
+  background-color: #fff;
   padding: 30px 20px 25px;
   border-radius: 12px;
   width: 350px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Title */
-.modal-title {
+.blog-feature-modal-title {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 25px;
 }
 
-/* Close ❌ Icon */
-.close-icon {
+.blog-feature-close-icon {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -141,15 +142,13 @@ header .navbar ul li a:hover{
   color: #e74c3c;
 }
 
-/* Button group layout */
-.button-group {
+.blog-feature-button-group {
   display: flex;
   justify-content: space-around;
   gap: 10px;
 }
 
-/* Shared button styles */
-.btn {
+.blog-feature-btn {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -159,57 +158,51 @@ header .navbar ul li a:hover{
   font-weight: 600;
   font-size: 14px;
   width: 140px;
+  cursor: pointer;
+  transition: transform .2s;
 }
 
-
-.btn img {
+.blog-feature-btn img {
   width: 18px;
   height: 18px;
   object-fit: contain;
-  filter: brightness(0) invert(1); /* Makes dark logos visible on dark buttons */
+  filter: brightness(0) invert(1);
 }
 
-
-/* Platform-specific button colors */
-.btn.hashnode {
+/* Platform Buttons */
+.blog-feature-hashnode {
   background-color: #2962ff;
-  color: white;
+  color: #fff;
+}
+.blog-feature-hashnode:hover {
+  background-color: #1d47b8;
 }
 
-.btn.hashnode :hover{
-  background-color: #2962ff;
-  color: white;
-  cursor: pointer;
+.blog-feature-medium {
+  background-color: #000;
+  color: #fff;
+}
+.blog-feature-medium:hover {
+  background-color: #333;
 }
 
-.btn.medium {
-  background-color: #000000;
-  color: white;
-}
-
-.btn.medium:hover {
-  background-color: #000000;
-  color: white;
-  cursor: pointer;
-}
-
-.btn:hover {
+.blog-feature-btn:hover {
   transform: scale(1.05);
 }
-/* navbar ends */
 
-/* hamburger icon starts*/
-#menu{
+/* ---------------- HAMBURGER ---------------- */
+#menu {
   font-size: 3rem;
   cursor: pointer;
   color: rgb(24, 2, 63);
   display: none;
 }
-@media(max-width:768px){
-  #menu{
-      display: block;
+
+@media(max-width:768px) {
+  #menu {
+    display: block;
   }
-  header .navbar{
+  header .navbar {
     position: fixed;
     top: 6.5rem; right: -120%;
     width: 75%;
@@ -218,18 +211,17 @@ header .navbar ul li a:hover{
     align-items: flex-start;
     background-color: #0e0f31;
   }
-  header .navbar ul{
+  header .navbar ul {
     flex-flow: column;
     padding: 1rem;
   }
-  header .navbar ul li{
+  header .navbar ul li {
     text-align: center;
-    width: 100%;
+    width: 26rem;
     margin: 1rem 0;
     border-radius: .5rem;
-    width: 26rem;
   }
-  header .navbar ul li a{
+  header .navbar ul li a {
     display: block;
     padding: 1rem;
     text-align: left;
@@ -237,35 +229,33 @@ header .navbar ul li a:hover{
     font-size: 2rem;
   }
   header .navbar ul li a.active,
-  header .navbar ul li a:hover{
+  header .navbar ul li a:hover {
     padding: 1rem;
     color: #fff;
     border-radius: .5rem;
     border-bottom: .5rem solid #011aff;
   }
-  .fa-times{
+  .fa-times {
     transform: rotate(180deg);
   }
-  header .navbar.nav-toggle{
+  header .navbar.nav-toggle {
     right: 0;
   }
 }
-/* hamburger icon ends */
 
-/* work section starts */
-.work{
-  /* background: #010124; */
+/* ---------------- WORK SECTION ---------------- */
+.work {
   background: linear-gradient(to bottom, #010136, #00003a);
   margin-top: 5rem;
 }
-.work h2{
+.work h2 {
   color: #fff;
   padding: 1rem;
 }
-.work .heading span{
+.work .heading span {
   color: rgb(255, 230, 0);
 }
-.work .button-group{
+.work .button-group {
   display: flex;
   flex-wrap: wrap;
   gap:1rem;
@@ -274,7 +264,7 @@ header .navbar ul li a:hover{
   justify-content: center;
   align-items: center;
 }
-.work .button-group .btn{
+.work .button-group .btn {
   outline: none;
   padding: 1rem 2rem;
   background: transparent;
@@ -284,21 +274,18 @@ header .navbar ul li a:hover{
   cursor: pointer;
   font-weight: 500;
 }
-.work .button-group .btn:hover{
+.work .button-group .btn:hover,
+.work .button-group .btn.is-checked {
   background-color: #fff;
   color: #000;
 }
-.work .button-group .btn.is-checked{
-  background-color: #fff;
-  color: #000;
-}
-.work .box-container{
+.work .box-container {
   display: flex;
   flex-wrap: wrap;
   gap:1.5rem;
   margin: 2rem;
 }
-.work .box-container .box{
+.work .box-container .box {
   flex:1 1 30rem;
   border-radius: .5rem;
   box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
@@ -308,12 +295,12 @@ header .navbar ul li a:hover{
   background: #fff;
   border: none;
 }
-.work .box-container .box img{
+.work .box-container .box img {
   height: 100%;
   width:100%;
   object-fit: cover;
 }
-.work .box-container .box .content{
+.work .box-container .box .content {
   height: 100%;
   width:100%;
   position: absolute;
@@ -322,9 +309,8 @@ header .navbar ul li a:hover{
   display: flex;
   flex-direction: column;
 }
-.work .box-container .box .content .tag{
+.work .box-container .box .content .tag {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 4.5rem;
@@ -332,10 +318,10 @@ header .navbar ul li a:hover{
   padding-left: 1rem;
   background: #ffd900;
 }
-.work .box-container .box .content .tag h3{
+.work .box-container .box .content .tag h3 {
   font-size: 2rem;
 }
-.work .box-container .box:hover .content{
+.work .box-container .box:hover .content {
   top: 25%;
 }
 .work .desc {
@@ -344,16 +330,16 @@ header .navbar ul li a:hover{
   flex-direction: column;
   justify-content: center;
 }
-.work .desc p{
+.work .desc p {
   font-size: 1.5rem;
 }
-.work .desc .btns{
+.work .desc .btns {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 2rem;
 }
-.work .desc .btns .btn{
+.work .desc .btns .btn {
   line-height: 0;
   display: inline;
   padding: 1.5rem 2.5rem;
@@ -363,24 +349,24 @@ header .navbar ul li a:hover{
   background: rgb(12, 12, 12);
   margin-right: 2rem;
 }
-.work .desc .btns .btn:hover{
+.work .desc .btns .btn:hover {
   background: #310ae0f5;
 }
 
 @media screen and (max-width: 450px) {
-  .work .button-group{
+  .work .button-group {
     width: 100%;
   }
-  .work .box-container{
+  .work .box-container {
     margin: 0rem;
   }
-  .work .box-container .grid-item .box{
+  .work .box-container .grid-item .box {
     width: 95% !important;
   }
 }
 
-/* back to home button */
-.backbtn{
+/* ---------------- BACK BUTTON ---------------- */
+.backbtn {
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
@@ -407,32 +393,29 @@ header .navbar ul li a:hover{
   font-size: 1.5rem;
   transition: 0.3s;
 }
-.backbtn .btn:hover{
+.backbtn .btn:hover {
   background: #ffffff;
   color: #000;
 }
 .backbtn .btn:hover i {
   transform: translateX(-8px);
 }
-/* work section ends */
 
-/* common media queries starts*/
-@media(max-width:450px){
-  html{
+/* ---------------- COMMON MEDIA ---------------- */
+@media(max-width:450px) {
+  html {
     font-size: 55%;
   }
-  body{
+  body {
     padding-right: 0;
   }
-  section{
+  section {
     padding: 2rem;
   }
 }
-/* common media queries ends*/
 
-
-/* scroll top starts */
-#scroll-top{
+/* ---------------- SCROLL TO TOP ---------------- */
+#scroll-top {
   position: fixed;
   top: -140%;
   right: 2rem;
@@ -444,7 +427,6 @@ header .navbar ul li a:hover{
   transition: 1s linear;
   z-index: 1000;
 }
-#scroll-top.active{
+#scroll-top.active {
   top: calc(100% - 12rem);
 }
-/* scroll top ends */
