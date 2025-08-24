@@ -478,5 +478,25 @@
       "view": "https://mysql-mern-api.vercel.app/",
       "code": "https://github.com/kashyapprajapat/MYSQL-MERN-API"
     }
+  },
+  {
+  "name": "CollectHub .NET API",
+  "desc": "A REST API built with .NET to manage and organize personal collections.",
+  "image": "api",
+  "category": "collecthubbackend",
+  "links": {
+    "view": "https://collecthubdotnet.onrender.com/",
+    "code": "https://github.com/kashyapprajapat/CollectHubDotNet"
   }
+},
+{
+  "name": "CollectHub Frontend",
+  "desc": "Frontend application for managing and showcasing collections from all CollectHub microservices in one place.",
+  "image": "frontend",
+  "category": "collecthubfrontend",
+  "links": {
+    "view": "https://collecthub.vercel.app/",
+    "code": "https://github.com/kashyapprajapat/Collecthub-frontend"
+  }
+}
 ]
