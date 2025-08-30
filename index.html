@@ -17,6 +17,23 @@
   <meta property="og:url" content="https://kashyapprajapati.netlify.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kashyap Prajapati Portfolio">
+  <!-- 🔥 Speculation Rules API -->
+  <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "where": { "href_matches": "/[^#]*$" },
+          "eagerness": "moderate"
+        }
+      ],
+      "prefetch": [
+        {
+          "where": { "href_matches": "/[^#]*$" },
+          "eagerness": "moderate"
+        }
+      ]
+    }
+  </script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -490,6 +507,28 @@
         closeBlogFeatureModal();
       }
     });
+  </script>
+    <!-- 🔥 Fallback Prefetch Script (for browsers without Speculation Rules API) -->
+  <script>
+    if (!HTMLScriptElement.supports || !HTMLScriptElement.supports('speculationrules')) {
+      const preloadedUrls = {};
+      function pointerenterHandler() {
+        if (!preloadedUrls[this.href]) {
+          preloadedUrls[this.href] = true;
+          const prefetcher = document.createElement('link');
+          prefetcher.as = prefetcher.relList.supports('prefetch') ? 'document' : 'fetch';
+          prefetcher.rel = prefetcher.relList.supports('prefetch') ? 'prefetch' : 'preload';
+          prefetcher.href = this.href;
+          document.head.appendChild(prefetcher);
+        }
+      }
+      document.querySelectorAll('a[href^="/"]').forEach(item => {
+        // skip in-page anchors
+        if (!item.getAttribute("href").includes("#")) {
+          item.addEventListener('pointerenter', pointerenterHandler);
+        }
+      });
+    }
   </script>
 
 </body>
