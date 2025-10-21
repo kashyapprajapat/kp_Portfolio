@@ -17,4 +17,9 @@ https://kashyap-87kfr.sevalla.page/
 
 ---
 
+---
+
+### Microsoft Clarity Report
+![clarity](./Macbook-Air-clarity.microsoft.com.png)
+
 # Thank You.
