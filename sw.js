@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kp-portfolio-v13';
+const CACHE_NAME = 'kp-portfolio-v14';
 
 // Assets to precache on install
 const PRECACHE_ASSETS = [
@@ -14,7 +14,7 @@ const PRECACHE_ASSETS = [
   '/assets/images/contact1.png',
   '/assets/images/icons/icon-192x192.png',
   '/assets/images/icons/icon-512x512.png',
-  '/manifest.json'
+  '/manifest.webmanifest'
 ];
 
 // Install: precache key assets
