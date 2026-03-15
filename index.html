@@ -870,12 +870,17 @@
 
       // Install button click
       installBtn.addEventListener('click', async () => {
-        if (deferredPrompt) {
-          deferredPrompt.prompt();
-          const { outcome } = await deferredPrompt.userChoice;
+        if (!deferredPrompt) return;
+        const promptEvent = deferredPrompt;
+        deferredPrompt = null;
+        installBanner.style.display = 'none';
+        
+        try {
+          promptEvent.prompt();
+          const { outcome } = await promptEvent.userChoice;
           console.log('[PWA] User choice:', outcome);
-          deferredPrompt = null;
-          installBanner.style.display = 'none';
+        } catch (err) {
+          console.error('[PWA] Prompt error:', err);
         }
       });
 
@@ -905,6 +910,7 @@
         installBanner.style.display = 'none';
         iosPrompt.style.display = 'none';
         deferredPrompt = null;
+        alert("App Installed successfully! Check your home screen or app drawer.");
       });
     }
   </script>
