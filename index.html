@@ -749,13 +749,162 @@
     }
   </script>
 
-  <!-- Service Worker Registration -->
+  <!-- PWA Install Banner -->
+  <div id="pwa-install-banner" style="
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+    color: #fff;
+    padding: 14px 16px;
+    z-index: 99999;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 2px solid #FF7A00;
+  ">
+    <div style="display:flex; align-items:center; gap:12px; flex:1;">
+      <img src="/assets/images/icons/icon-192x192.png" alt="App Icon" style="width:44px;height:44px;border-radius:10px;">
+      <div>
+        <strong style="font-size:15px;">Install Kashyap's Portfolio</strong>
+        <p style="margin:2px 0 0;font-size:12px;opacity:0.8;">Add to home screen for quick access</p>
+      </div>
+    </div>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <button id="pwa-install-btn" style="
+        background: #FF7A00;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        white-space: nowrap;
+      ">Install</button>
+      <button id="pwa-dismiss-btn" style="
+        background: transparent;
+        color: #aaa;
+        border: none;
+        padding: 8px;
+        cursor: pointer;
+        font-size: 20px;
+        line-height: 1;
+      ">&times;</button>
+    </div>
+  </div>
+
+  <!-- iOS Add to Home Screen Prompt -->
+  <div id="ios-install-prompt" style="
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+    color: #fff;
+    padding: 16px;
+    z-index: 99999;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 2px solid #FF7A00;
+    text-align: center;
+  ">
+    <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:8px;">
+      <img src="/assets/images/icons/icon-192x192.png" alt="App Icon" style="width:40px;height:40px;border-radius:10px;">
+      <strong style="font-size:15px;">Install Kashyap's Portfolio</strong>
+    </div>
+    <p style="margin:0 0 6px;font-size:13px;opacity:0.9;">
+      Tap <strong style="font-size:18px;">⬆</strong> (Share) then <strong>"Add to Home Screen"</strong>
+    </p>
+    <button id="ios-dismiss-btn" style="
+      background: transparent;
+      color: #aaa;
+      border: 1px solid #555;
+      padding: 6px 16px;
+      border-radius: 6px;
+      margin-top: 6px;
+      cursor: pointer;
+      font-size: 13px;
+    ">Got it</button>
+  </div>
+
+  <!-- Service Worker Registration + Install Prompt Logic -->
   <script>
+    // Register Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((reg) => console.log('[PWA] Service Worker registered:', reg.scope))
           .catch((err) => console.warn('[PWA] Service Worker registration failed:', err));
+      });
+    }
+
+    // --- PWA Install Prompt Logic ---
+    let deferredPrompt = null;
+    const installBanner = document.getElementById('pwa-install-banner');
+    const installBtn = document.getElementById('pwa-install-btn');
+    const dismissBtn = document.getElementById('pwa-dismiss-btn');
+    const iosPrompt = document.getElementById('ios-install-prompt');
+    const iosDismissBtn = document.getElementById('ios-dismiss-btn');
+
+    // Check if already installed (standalone mode)
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+      || window.navigator.standalone === true;
+
+    // Check if user previously dismissed
+    const isDismissed = localStorage.getItem('pwa-install-dismissed');
+
+    if (!isStandalone && !isDismissed) {
+      // Capture beforeinstallprompt (Chrome, Edge, Samsung Internet, etc.)
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        console.log('[PWA] beforeinstallprompt captured');
+        installBanner.style.display = 'flex';
+      });
+
+      // Install button click
+      installBtn.addEventListener('click', async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          console.log('[PWA] User choice:', outcome);
+          deferredPrompt = null;
+          installBanner.style.display = 'none';
+        }
+      });
+
+      // Dismiss button
+      dismissBtn.addEventListener('click', () => {
+        installBanner.style.display = 'none';
+        localStorage.setItem('pwa-install-dismissed', Date.now());
+      });
+
+      // iOS Safari detection (no beforeinstallprompt support)
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+      if (isIOS && isSafari) {
+        setTimeout(() => {
+          iosPrompt.style.display = 'block';
+        }, 3000);
+      }
+
+      iosDismissBtn.addEventListener('click', () => {
+        iosPrompt.style.display = 'none';
+        localStorage.setItem('pwa-install-dismissed', Date.now());
+      });
+
+      // Hide banner if app gets installed
+      window.addEventListener('appinstalled', () => {
+        console.log('[PWA] App installed!');
+        installBanner.style.display = 'none';
+        iosPrompt.style.display = 'none';
+        deferredPrompt = null;
       });
     }
   </script>
