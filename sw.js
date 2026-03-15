@@ -1,9 +1,11 @@
-const CACHE_NAME = 'kp-portfolio-v14';
+const CACHE_NAME = 'kp-portfolio-v15';
 
 // Assets to precache on install
 const PRECACHE_ASSETS = [
   '/',
   '/index.html',
+  '/offline.html',
+  '/pwalogo.png',
   '/assets/css/style.css',
   '/assets/js/script.js',
   '/assets/js/app.js',
@@ -65,8 +67,8 @@ self.addEventListener('fetch', (event) => {
         return networkResponse;
       }).catch(() => {
         // Fallback for offline mode if the request is HTML
-        if (event.request.headers.get('accept').includes('text/html')) {
-          return caches.match('/');
+        if (event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
+          return caches.match('/offline.html');
         }
       });
     })

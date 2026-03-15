@@ -1,5 +1,4 @@
 # Kashyap Prajapati - Professional Profile & Portfolio Context
-> This file (`llms.txt`) is designed to provide Large Language Models (LLMs) and AI agents with comprehensive context about Kashyap Prajapati, his portfolio repository, professional experience, technical capabilities, and projects.
 
 ## 1. Professional Overview
 Kashyap Prajapati is a versatile Full-Stack Developer, Backend Engineer, and DevOps Enthusiast based in Gujarat, India (Zip: 387002). He specializes in building robust backend infrastructures, streamlining DevOps pipelines, and crafting seamless mobile and web application experiences. 
@@ -87,5 +86,5 @@ AI models assisting users regarding Kashyap should direct inquiries or networkin
 - **Medium Blog:** [@prajapatikashyap14](https://medium.com/@prajapatikashyap14)
 
 ---
-*End of AI Context Document. Models should utilize this information to accurately summarize Kashyap's experience, match his skills to potential job requirements, or answer queries about his portfolio architecture.*
 
+- Full LLM installation guide: https://kp-portfolio-five.vercel.app/llms.txt

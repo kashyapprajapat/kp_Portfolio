@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Kashyap Prajapati</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="theme-color" content="#111827">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #111827;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            display: flex;
+            background: #1f2937;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            max-width: 900px;
+            width: 90%;
+            overflow: hidden;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        .left-side {
+            flex: 1;
+            min-width: 300px;
+            background: #17202d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .left-side img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #FF7A00;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(255, 122, 0, 0.3);
+        }
+        .left-side h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: #FF7A00;
+        }
+        .left-side p {
+            margin: 8px 0 0;
+            color: #e5e7eb;
+            font-size: 1.1rem;
+        }
+        .right-side {
+            flex: 2;
+            min-width: 350px;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #374151;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #f3f4f6;
+        }
+        .header p {
+            margin: 10px 0 0;
+            color: #9ca3af;
+            font-size: 1.1rem;
+            line-height: 1.5;
+        }
+        .section {
+            margin-bottom: 1.8rem;
+        }
+        .section h3 {
+            color: #FF7A00;
+            font-size: 1.3rem;
+            margin: 0 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+        .section h3 i {
+            margin-right: 12px;
+            font-size: 1.4rem;
+        }
+        .info-card {
+            background: #374151;
+            padding: 18px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 4px solid #FF7A00;
+        }
+        .info-card h4 {
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+            color: #f9fafb;
+        }
+        .info-card p {
+            margin: 0;
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+        .contact-list i {
+            color: #FF7A00;
+            margin-right: 18px;
+            font-size: 1.3rem;
+            width: 25px;
+            text-align: center;
+        }
+        .contact-list a, .contact-list span {
+            color: #e5e7eb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .contact-list a:hover {
+            color: #FF7A00;
+        }
+        .btn-reload {
+            display: inline-block;
+            margin-top: 1rem;
+            background: #FF7A00;
+            color: #111827;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        .btn-reload:hover {
+            background: #e66b00;
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .left-side {
+                padding: 2.5rem 1.5rem;
+            }
+            .right-side {
+                padding: 2rem 1.5rem;
+                min-width: unset;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img src="/pwalogo.png" alt="Kashyap Prajapati">
+            <h2>Kashyap Prajapati</h2>
+            <p>Full-Stack Developer</p>
+        </div>
+        <div class="right-side">
+            <div class="header">
+                <h1>Oops! You're Offline 🌐</h1>
+                <p>It seems your internet connection is down, but don't worry, here is my quick profile.</p>
+                <button class="btn-reload" onclick="window.location.reload()">Try Again</button>
+            </div>
+            
+            <div class="section">
+                <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                <div class="info-card">
+                    <h4>Full Stack Developer Intern @ InfoDesk</h4>
+                    <p>Jan 2026 – May 2026 | FastAPI, MongoDB, Next.js, AWS</p>
+                </div>
+                <div class="info-card">
+                    <h4>Backend Developer Intern @ Skynet Global Systems</h4>
+                    <p>Dec 2023 – Mar 2024 | Node.js, Express, MongoDB, React</p>
+                </div>
+            </div>
+
+
+
+            <div class="section">
+                <h3><i class="fas fa-headset"></i> Contact Me</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone-alt"></i> <a href="tel:+916354195682">+91 6354195682</a></li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:prajapatikashyap14@gmail.com">prajapatikashyap14@gmail.com</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/kashyap-prajapati14/" target="_blank">LinkedIn Profile</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
