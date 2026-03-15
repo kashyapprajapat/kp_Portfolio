@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kp-portfolio-v5';
+const CACHE_NAME = 'kp-portfolio-v6';
 
 // Assets to precache on install
 const PRECACHE_ASSETS = [
@@ -45,50 +45,30 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Fetch: network-first for HTML, cache-first for static assets
+// Fetch: Cache-First + Network Fallback ensuring valid response for PWA install check
 self.addEventListener('fetch', (event) => {
-  const { request } = event;
+  if (event.request.method !== 'GET') return;
 
-  // Skip non-GET requests
-  if (request.method !== 'GET') return;
-
-  // Skip cross-origin requests (CDN scripts, external APIs)
-  if (!request.url.startsWith(self.location.origin)) return;
-
-  // HTML pages: network-first
-  if (request.headers.get('accept')?.includes('text/html')) {
-    event.respondWith(
-      fetch(request)
-        .then((response) => {
-          const clone = response.clone();
-          caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-          return response;
-        })
-        .catch(() => caches.match(request))
-    );
-    return;
-  }
-
-  // Static assets: cache-first
   event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) return cachedResponse;
-
-        return fetch(request).then((response) => {
-          // Cache valid responses
-          if (response.status === 200) {
-            const clone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-          }
-          return response;
-        });
-      })
-      .catch(() => {
-        // Optionally return a fallback for images
-        if (request.destination === 'image') {
-          return new Response('', { status: 404 });
+    caches.match(event.request).then((cachedResponse) => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+      return fetch(event.request).then((networkResponse) => {
+        // Cache valid responses dynamically
+        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+          const responseToCache = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseToCache);
+          });
         }
-      })
+        return networkResponse;
+      }).catch(() => {
+        // Fallback for offline mode if the request is HTML
+        if (event.request.headers.get('accept').includes('text/html')) {
+          return caches.match('/');
+        }
+      });
+    })
   );
 });
