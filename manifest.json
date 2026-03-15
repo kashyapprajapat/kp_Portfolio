@@ -4,8 +4,8 @@
   "description": "Full-Stack Developer, Backend Developer, React Native & Android Mobile Developer, DevOps Engineer — Portfolio of Kashyap Prajapati.",
   "start_url": ".",
   "scope": "/",
+  "id": "/",
   "display": "standalone",
-  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
   "prefer_related_applications": false,
   "background_color": "#111827",
   "theme_color": "#111827",
@@ -15,13 +15,25 @@
       "src": "/assets/images/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/assets/images/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/images/icons/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/images/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "categories": ["portfolio", "technology", "developer"],
