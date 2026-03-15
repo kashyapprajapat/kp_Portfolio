@@ -1,4 +1,4 @@
-const CACHE_NAME = 'kp-portfolio-v12';
+const CACHE_NAME = 'kp-portfolio-v13';
 
 // Assets to precache on install
 const PRECACHE_ASSETS = [
