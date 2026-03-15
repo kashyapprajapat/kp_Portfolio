@@ -78,6 +78,13 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="./assets/images/Faviconv2.png" type="image/x-png">
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#111827">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KP Portfolio">
+  <link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png">
   <title>Kashyap Prajapati</title>
   <script type="text/javascript">
     (function (c, l, a, r, i, t, y) {
@@ -738,6 +745,17 @@
         if (!item.getAttribute("href").includes("#")) {
           item.addEventListener('pointerenter', pointerenterHandler);
         }
+      });
+    }
+  </script>
+
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then((reg) => console.log('[PWA] Service Worker registered:', reg.scope))
+          .catch((err) => console.warn('[PWA] Service Worker registration failed:', err));
       });
     }
   </script>
