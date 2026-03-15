@@ -79,7 +79,7 @@
   <!-- Favicon -->
   <link id='favicon' rel="shortcut icon" href="./assets/images/Faviconv2.png" type="image/x-png">
   <!-- PWA -->
-  <link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#111827">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -749,6 +749,52 @@
     }
   </script>
 
+  <!-- Android Install Banner -->
+  <div id="android-install-banner" style="
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+    color: #fff;
+    padding: 14px 16px;
+    z-index: 99999;
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+    font-family: 'Segoe UI', sans-serif;
+    border-top: 2px solid #FF7A00;
+    display: none;
+    align-items: center;
+    gap: 12px;
+  ">
+    <img src="/assets/images/icons/icon-192x192.png" alt="App Icon" style="width:48px;height:48px;border-radius:12px;flex-shrink:0;">
+    <div style="flex:1;">
+      <div style="font-weight:700;font-size:14px;margin-bottom:2px;">Install Kashyap's Portfolio</div>
+      <div style="font-size:12px;opacity:0.75;">Add to Home Screen for quick access</div>
+    </div>
+    <button id="android-install-btn" style="
+      background: #FF7A00;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    ">Install</button>
+    <button id="android-dismiss-btn" style="
+      background: transparent;
+      color: #aaa;
+      border: 1px solid #555;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+    ">✕</button>
+  </div>
+
   <!-- iOS Add to Home Screen Prompt -->
   <div id="ios-install-prompt" style="
     display: none;
@@ -784,49 +830,96 @@
     ">Got it</button>
   </div>
 
-  <!-- Service Worker Registration -->
+  <!-- Service Worker + PWA Install Logic -->
   <script>
-    // Register Service Worker
+    // ── 1. Register Service Worker ──────────────────────────────────────────
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-          .then((reg) => console.log('[PWA] Service Worker registered:', reg.scope))
-          .catch((err) => console.warn('[PWA] Service Worker registration failed:', err));
+          .then(reg => console.log('[PWA] SW registered:', reg.scope))
+          .catch(err => console.warn('[PWA] SW registration failed:', err));
       });
     }
 
-    // --- iOS PWA Install Prompt Logic ---
-    const iosPrompt = document.getElementById('ios-install-prompt');
-    const iosDismissBtn = document.getElementById('ios-dismiss-btn');
+    // ── 2. Capture beforeinstallprompt ASAP (Android Chrome) ───────────────
+    let deferredInstallPrompt = null;
 
-    // Check if already installed (standalone mode)
-    const isStandalone = window.matchMedia('(display-mode: standalone)').matches
-      || window.navigator.standalone === true;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      // Prevent Chrome from auto-showing the mini-infobar
+      e.preventDefault();
+      // Stash the event so it can be triggered later
+      deferredInstallPrompt = e;
+      console.log('[PWA] beforeinstallprompt captured');
 
-    // Check if user previously dismissed
-    const isDismissed = localStorage.getItem('pwa-install-dismissed');
-
-    if (!isStandalone && !isDismissed) {
-      // iOS Safari detection (no beforeinstallprompt support)
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
-      if (isIOS && isSafari) {
+      // Show our custom Android banner after 3 seconds
+      const dismissed = localStorage.getItem('pwa-android-dismissed');
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+      if (!isStandalone && !dismissed) {
         setTimeout(() => {
-          iosPrompt.style.display = 'block';
+          const banner = document.getElementById('android-install-banner');
+          if (banner) banner.style.display = 'flex';
         }, 3000);
       }
+    });
 
-      iosDismissBtn.addEventListener('click', () => {
-        iosPrompt.style.display = 'none';
-        localStorage.setItem('pwa-install-dismissed', Date.now());
-      });
-    }
-    
-    // Success feedback
+    // Android Install button click
+    document.addEventListener('DOMContentLoaded', () => {
+      const androidBanner = document.getElementById('android-install-banner');
+      const androidInstallBtn = document.getElementById('android-install-btn');
+      const androidDismissBtn = document.getElementById('android-dismiss-btn');
+      const iosPrompt = document.getElementById('ios-install-prompt');
+      const iosDismissBtn = document.getElementById('ios-dismiss-btn');
+
+      // ── Android Install ──
+      if (androidInstallBtn) {
+        androidInstallBtn.addEventListener('click', async () => {
+          if (!deferredInstallPrompt) return;
+          androidBanner.style.display = 'none';
+          deferredInstallPrompt.prompt();
+          const { outcome } = await deferredInstallPrompt.userChoice;
+          console.log('[PWA] User choice:', outcome);
+          deferredInstallPrompt = null;
+        });
+      }
+
+      if (androidDismissBtn) {
+        androidDismissBtn.addEventListener('click', () => {
+          androidBanner.style.display = 'none';
+          localStorage.setItem('pwa-android-dismissed', Date.now());
+        });
+      }
+
+      // ── iOS Safari Install Prompt ──
+      const isStandalone = window.matchMedia('(display-mode: standalone)').matches
+        || window.navigator.standalone === true;
+      const isDismissed = localStorage.getItem('pwa-install-dismissed');
+
+      if (!isStandalone && !isDismissed) {
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+        if (isIOS && isSafari) {
+          setTimeout(() => {
+            if (iosPrompt) iosPrompt.style.display = 'block';
+          }, 3000);
+        }
+      }
+
+      if (iosDismissBtn) {
+        iosDismissBtn.addEventListener('click', () => {
+          iosPrompt.style.display = 'none';
+          localStorage.setItem('pwa-install-dismissed', Date.now());
+        });
+      }
+    });
+
+    // ── 3. App installed callback ──────────────────────────────────────────
     window.addEventListener('appinstalled', () => {
-      console.log('[PWA] App installed natively!');
+      console.log('[PWA] App installed!');
+      const androidBanner = document.getElementById('android-install-banner');
+      const iosPrompt = document.getElementById('ios-install-prompt');
+      if (androidBanner) androidBanner.style.display = 'none';
       if (iosPrompt) iosPrompt.style.display = 'none';
-      alert("App Installed successfully! Check your home screen or app drawer.");
+      deferredInstallPrompt = null;
     });
   </script>
 
