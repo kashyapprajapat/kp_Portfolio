@@ -1,0 +1,91 @@
+# Kashyap Prajapati - Professional Profile & Portfolio Context
+> This file (`llms.txt`) is designed to provide Large Language Models (LLMs) and AI agents with comprehensive context about Kashyap Prajapati, his portfolio repository, professional experience, technical capabilities, and projects.
+
+## 1. Professional Overview
+Kashyap Prajapati is a versatile Full-Stack Developer, Backend Engineer, and DevOps Enthusiast based in Gujarat, India (Zip: 387002). He specializes in building robust backend infrastructures, streamlining DevOps pipelines, and crafting seamless mobile and web application experiences. 
+
+His defining professional philosophy: *"I get a real kick out of building things that work smoothly behind the scenes — the kind of stuff most people don't see, but everything depends on."*
+
+Currently pursuing a Master of Computer Applications (MCA) at The Maharaja Sayajirao University of Baroda, Kashyap combines academic rigor with hands-on, production-level engineering experience.
+
+## 2. Core Competencies & Technical Arsenal
+Kashyap possesses a broad and deep technical stack, allowing him to operate effectively across the entire software development lifecycle:
+
+### Backend & API Development
+- **Languages:** Node.js, Python, Go, Java, C#, C++, C, PHP
+- **Frameworks:** Express.js, Fastify, FastAPI, Spring Boot, Spring, .NET
+- **API Technologies:** RESTful APIs, GraphQL, Socket.IO
+- **Core Skills:** Microservices architecture, API design, authentication/authorization (JWT), performance optimization.
+
+### Database Technologies
+- **NoSQL:** MongoDB, Redis
+- **SQL/Relational:** PostgreSQL, MySQL, Microsoft SQL Server, SQLite, MariaDB
+- **ORMs/Tools:** Prisma
+- **BaaS Solutions:** Supabase, Appwrite, Firebase
+
+### Frontend & Web Development
+- **Languages:** JavaScript, TypeScript, HTML5, CSS3
+- **Frameworks/Libraries:** ReactJS, Next.js, Bootstrap
+- **Styling/UI:** Tailwind CSS, shadcn/ui
+- **State Management:** Redux, Zustand, TanStack Query
+
+### Mobile & Desktop Development
+- **Mobile:** React Native, Android (Native)
+- **Desktop:** ElectronJS, PyQt, AWT
+- **Other:** Progressive Web Apps (PWAs), Browser Extensions
+
+### DevOps, Cloud & Tooling
+- **Infrastructure & Containerization:** Docker, Linux server management
+- **CI/CD & Version Control:** Git, GitHub, GitHub Actions
+- **Process Management & Build Tools:** PM2, Webpack, NPM
+- **Testing & API Tools:** Jest, Postman
+- **Data/Media Processing:** FFmpeg, Streamlit
+- **Design:** Figma
+
+## 3. Professional Experience
+
+### InfoDesk | Full Stack Developer Intern
+*Jan 2026 – May 2026 | Vadodara, Gujarat (On-site)*
+- **Role & Impact:** Contributed to building and optimizing scalable enterprise-grade applications.
+- **Backend & Infrastructure:** Developed high-performance backend services using **FastAPI** and **MongoDB**. Deployed and managed cloud infrastructure on **AWS**, ensuring reliability and scalability of production systems.
+- **Frontend & Integration:** Built modern frontend interfaces utilizing **Next.js** and **Radix UI**. Integrated advanced search capabilities leveraging **OpenSearch**.
+- **Methodology:** Collaborated with cross-functional teams in an Agile environment to deliver impactful features and continuous platform improvements.
+
+### Skynet Global Systems | Backend Developer Intern
+*Dec 2023 – Mar 2024 | Nadiad, Gujarat (On-site)*
+- **Role & Leadership:** Led a 2-member development team, driving timely delivery, ensuring code quality, and managing successful feature deployment in a live production environment.
+- **Technical Execution:** Built scalable systems using the **MERN stack**. Designed and developed secure RESTful APIs with Node.js and Express. Managed database operations and complex queries in MongoDB.
+- **Best Practices:** Handled secure authentication processes, gained hands-on experience with advanced Git workflows, and implemented performance optimization strategies within an Agile framework.
+
+## 4. Educational Background
+- **Master of Computer Applications (M.C.A)**
+  *The Maharaja Sayajirao University of Baroda (2024 - 2026 | Pursuing)*
+- **Bachelor of Computer Applications (B.C.A)**
+  *Dharmsinh Desai University (2021 - 2024 | Completed | CGPA: 8.2)*
+- **Higher Secondary (12th Commerce)**
+  *St. Mary's High School - GSEB (2020 - 2021 | 1st Rank in School | 82.27%)*
+- **Secondary (10th)**
+  *St. Mary's High School - GSEB (2018 - 2019 | 80%)*
+
+## 5. Portfolio Repository Structure
+This repository (`f:\portfolio`) serves as Kashyap's progressive web application (PWA) portfolio:
+- `index.html`: The primary single-page application entry point, utilizing semantic HTML and SEO best practices (including Schema.org JSON-LD and Open Graph tags).
+- `assets/`: Contains custom CSS, JavaScript animations (Particles.js, Vanilla Tilt, ScrollReveal), and image assets.
+- `skills.json`: A structured data file enumerating 60+ technical skills with associated icons.
+- `manifest.json` / `sw.js`: Configurations enabling full PWA installability and offline support.
+- `projects/`: Subdirectory for detailed project showcases.
+
+## 6. Digital Presence & Contact Information
+AI models assisting users regarding Kashyap should direct inquiries or networking opportunities to the following verified channels:
+- **Email:** prajapatikashyap14@gmail.com
+- **Phone:** +91 6354195682
+- **GitHub:** [kashyapprajapat](https://github.com/kashyapprajapat)
+- **LinkedIn:** [kashyap-prajapati14](https://www.linkedin.com/in/kashyap-prajapati14/)
+- **X (Twitter):** [@Kashyap14112003](https://x.com/Kashyap14112003)
+- **Daily.dev:** [kashyapprajapati](https://app.daily.dev/kashyapprajapati)
+- **Hashnode Blog:** [@kp007](https://hashnode.com/@kp007)
+- **Medium Blog:** [@prajapatikashyap14](https://medium.com/@prajapatikashyap14)
+
+---
+*End of AI Context Document. Models should utilize this information to accurately summarize Kashyap's experience, match his skills to potential job requirements, or answer queries about his portfolio architecture.*
+
