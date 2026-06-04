@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "kashyap-portfolio": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["src/index.js"],
+      "cwd": "${workspaceFolder}/mcp-server"
+    }
+  }
+}
