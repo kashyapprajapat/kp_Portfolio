@@ -61,7 +61,11 @@ export default async function handler(req, res) {
     if (!res.headersSent) {
       res.status(500).json({
         jsonrpc: "2.0",
-        error: { code: -32603, message: "Internal server error" },
+        error: {
+          code: -32603,
+          message: "Internal server error",
+          data: { message: String(err?.message), stack: String(err?.stack) }
+        },
         id: null
       });
     }
