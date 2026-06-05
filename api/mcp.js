@@ -9,6 +9,7 @@
 
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 import { buildServer } from "./_portfolio.js";
+import { renderDocsHtml } from "./_docs.js";
 
 function setCors(res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -60,6 +61,24 @@ export default async function handler(req, res) {
 
   if (req.method === "OPTIONS") {
     res.status(204).end();
+    return;
+  }
+
+  // Browser visits (GET without an SSE Accept header) get the human-friendly
+  // documentation + live tester page. MCP SSE clients send
+  // `Accept: text/event-stream` and are handled by the 405 below (stateless
+  // mode has no GET stream).
+  const accept = String(req.headers.accept || "");
+  if (
+    (req.method === "GET" || req.method === "HEAD") &&
+    !accept.includes("text/event-stream")
+  ) {
+    const proto =
+      req.headers["x-forwarded-proto"] || (req.socket?.encrypted ? "https" : "http");
+    const host = req.headers.host || "www.kashyapprajapati.in";
+    const endpoint = `${proto}://${host}${(req.url || "/mcp").split("?")[0]}`;
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.status(200).send(req.method === "HEAD" ? "" : renderDocsHtml(endpoint));
     return;
   }
 
