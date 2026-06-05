@@ -23,6 +23,38 @@ function setCors(res) {
   res.setHeader("Access-Control-Expose-Headers", "mcp-session-id");
 }
 
+// Read and JSON-parse the raw request body directly from the stream.
+//
+// We deliberately avoid Vercel's lazy `req.body` getter: accessing it triggers
+// Vercel's own body parser, which conflicts with the MCP transport and throws
+// "Invalid JSON". Reading the stream ourselves keeps full control.
+function readJsonBody(req) {
+  return new Promise((resolve) => {
+    // If a framework already parsed the body into an object, reuse it.
+    const pre = Object.getOwnPropertyDescriptor(req, "body");
+    if (pre && typeof pre.value === "object" && pre.value !== null) {
+      resolve(pre.value);
+      return;
+    }
+    let raw = "";
+    req.on("data", (chunk) => {
+      raw += chunk;
+    });
+    req.on("end", () => {
+      if (!raw) {
+        resolve(undefined);
+        return;
+      }
+      try {
+        resolve(JSON.parse(raw));
+      } catch {
+        resolve(undefined);
+      }
+    });
+    req.on("error", () => resolve(undefined));
+  });
+}
+
 export default async function handler(req, res) {
   setCors(res);
 
@@ -43,6 +75,8 @@ export default async function handler(req, res) {
     return;
   }
 
+  const parsedBody = await readJsonBody(req);
+
   const server = buildServer();
   const transport = new StreamableHTTPServerTransport({
     sessionIdGenerator: undefined // stateless
@@ -55,17 +89,13 @@ export default async function handler(req, res) {
 
   try {
     await server.connect(transport);
-    await transport.handleRequest(req, res, req.body);
+    await transport.handleRequest(req, res, parsedBody);
   } catch (err) {
     console.error("MCP request error:", err);
     if (!res.headersSent) {
       res.status(500).json({
         jsonrpc: "2.0",
-        error: {
-          code: -32603,
-          message: "Internal server error",
-          data: { message: String(err?.message), stack: String(err?.stack) }
-        },
+        error: { code: -32603, message: "Internal server error" },
         id: null
       });
     }
