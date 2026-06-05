@@ -1,4 +1,15 @@
 {
+  "rewrites": [
+    {
+      "source": "/mcp",
+      "destination": "/api/mcp"
+    }
+  ],
+  "functions": {
+    "api/mcp.js": {
+      "maxDuration": 30
+    }
+  },
   "headers": [
     {
       "source": "/manifest.webmanifest",

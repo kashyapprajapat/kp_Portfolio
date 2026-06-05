@@ -1,0 +1,14 @@
+{
+  "name": "kashyap-portfolio-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kashyap Prajapati's portfolio website with a live Model Context Protocol (MCP) endpoint served as a Vercel Serverless Function.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^3.23.8"
+  }
+}
