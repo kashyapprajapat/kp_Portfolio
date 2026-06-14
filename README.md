@@ -128,4 +128,4 @@ See [`mcp-server/README.md`](./mcp-server/README.md) for full client setup and d
 
 ---
 
-# Thank You.
+# Thank You. ☕🍵🧋
